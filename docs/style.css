@@ -14,7 +14,7 @@ h2{
 }
 
 footer > p{
-	font-size: 12px;
+	font-size: 0.7em;
 	width: 100%;
 	text-align: center;
 	margin: 0px auto 20px auto;
@@ -36,10 +36,7 @@ footer div.flexbox > div > img{
 
 footer div.flexbox > div > p{
 	margin-top: 6px;
-}
-
-footer div.flexbox > div > p{
-	font-size: 15px;
+	font-size: 1.3em;
 }
 
 footer div.flexbox > div > p:first-child{
@@ -96,7 +93,7 @@ section{
 	background-color: white;
 	font-family: "Nunito", sans-serif;
 	position: relative;
-	font-size: 1.0em;
+	font-size: 1.3em;
 	padding-left: 10%;
 	padding-right: 10%;
 }
