@@ -137,6 +137,7 @@ div.flexboxItem > p:first-child{
 }
 
 div.flexboxItem > p > a{
+	text-decoration: none;
 	color: inherit;
 }
 
