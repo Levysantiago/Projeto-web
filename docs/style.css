@@ -97,9 +97,10 @@ section{
 	background-color: white;
 	font-family: "Nunito", sans-serif;
 	position: relative;
-	font-size: 18px;
+	/*font-size: 1.3em;*/
 	padding-left: 10%;
 	padding-right: 10%;
+	font-size:1.3em;
 }
 
 div.flexboxItem > p{
@@ -163,6 +164,10 @@ div.flexboxItem > p > a:hover{
 
 	.mainHeader{
 		height: 50%;
+	}
+
+	section{
+		font-size: 14px;
 	}
 }
 
