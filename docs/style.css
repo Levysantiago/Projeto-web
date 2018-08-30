@@ -14,7 +14,7 @@ h2{
 }
 
 footer > p{
-	font-size: 0.7em;
+	font-size: 5px;
 	width: 100%;
 	text-align: center;
 	margin: 0px auto 20px auto;
@@ -47,6 +47,10 @@ footer div.flexbox > div > p:first-child{
 header{
 	height: 150px;
 	margin-bottom: 80px;
+}
+
+nav{
+	font-size: 18px;
 }
 
 header > nav, footer nav{
@@ -93,7 +97,7 @@ section{
 	background-color: white;
 	font-family: "Nunito", sans-serif;
 	position: relative;
-	font-size: 1.3em;
+	font-size: 18px;
 	padding-left: 10%;
 	padding-right: 10%;
 }
