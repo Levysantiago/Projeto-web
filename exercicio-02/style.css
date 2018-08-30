@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
 *{
 	margin: 0px;
 	padding: 0px;
 	color: #353535;
+}
+
+html, body{
+	height: 100%;
+	width: 100%;
 }
 
 a{
@@ -69,11 +77,17 @@ header > h1{
 	text-align: center;
 }
 
-header.mainHeader > h1{
-	margin-left: 30px;
+header.mainHeader > div{
+	top: 40%;
+	position: absolute;
+	font-size: 40px;
+	width: 100%;
+	text-align: center;
+}
+
+header.mainHeader > div > h1{
+	font-family: "Raleway", sans-serif;
 	color: white;
-	font-size: 7vw;
-	line-height: 40vw;
 }
 
 header > nav > a, footer nav > a{
@@ -97,7 +111,6 @@ section{
 	background-color: white;
 	font-family: "Nunito", sans-serif;
 	position: relative;
-	/*font-size: 1.3em;*/
 	padding-left: 10%;
 	padding-right: 10%;
 	font-size:1.3em;
@@ -129,11 +142,15 @@ div.flexboxItem > p > a:hover{
 }
 
 .mainHeader{
-	background-image: url(imgs/principal.png);
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	height: 100vh;
+	background: url(imgs/principal.png) no-repeat 50% 50%;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
 	margin-bottom: 30px;
+}
+
+body{
+	line-height: 1.5;
 }
 
 .flexbox{
@@ -160,10 +177,6 @@ div.flexboxItem > p > a:hover{
 @media(max-width: 1100px){
 	.flexboxItem{
 		width: 80%;
-	}
-
-	.mainHeader{
-		height: 50%;
 	}
 
 	section{
