@@ -1,0 +1,183 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	color: #353535;
+}
+
+a{
+	text-decoration: none;
+}
+
+h2{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+footer > p{
+	font-size: 12px;
+	width: 100%;
+	text-align: center;
+	margin: 0px auto 20px auto;
+}
+
+footer div.flexbox > div{
+	width: 400px;
+	margin-bottom: 10px;
+}
+
+footer div.flexbox > div.flexbox{
+	flex-direction: column;
+}
+
+footer div.flexbox > div > img{
+	float: left;
+	margin-right: 20px;
+}
+
+footer div.flexbox > div > p{
+	margin-top: 6px;
+}
+
+footer div.flexbox > div > p{
+	font-size: 15px;
+}
+
+footer div.flexbox > div > p:first-child{
+	font-size: 20px;
+	color: #999a9b;
+}
+
+header{
+	height: 150px;
+	margin-bottom: 80px;
+}
+
+header > nav, footer nav{
+	text-align: right;
+	line-height: 80px;
+}
+
+footer nav{
+	text-align: center;
+}
+
+header > h1{
+	line-height: 100px;
+	font-size: 60px;
+	font-family: "brandon-grotesque", Brandon Grotesque, Helvetica Neue, Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+header.mainHeader > h1{
+	margin-left: 30px;
+	color: white;
+	font-size: 7vw;
+	line-height: 40vw;
+}
+
+header > nav > a, footer nav > a{
+	height: 100%;
+	width: 100px;
+	text-align: center;
+	margin-right: 30px;
+	color: black;
+}
+
+header.mainHeader a{
+	color: white;
+}
+
+header > nav > a:hover, footer nav > a:hover{
+	font-weight: bold;
+	border-bottom: 2px solid;
+}
+
+section{
+	background-color: white;
+	font-family: "Nunito", sans-serif;
+	position: relative;
+	font-size: 1.0em;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+div.flexboxItem > p{
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+
+div.flexboxItem > p.dateText{
+	font-size: 10px;
+}
+
+div.flexboxItem > p:first-child{
+	font-size: 20px;
+	color: #1970aa;
+	font-weight: bold;
+}
+
+div.flexboxItem > p > a{
+	color: black;
+	text-decoration: underline;
+}
+
+div.flexboxItem > p > a:hover{
+	color: #47bcb6;
+	font-weight: bold;
+}
+
+.mainHeader{
+	background-image: url(imgs/principal.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	height: 100vh;
+	margin-bottom: 30px;
+}
+
+.flexbox{
+	align-items: baseline;
+	height: auto;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.flexboxItem {
+	margin: 20px 40px 20px 0px;
+	background-color: white;
+	height: auto;
+	min-width: 100px;
+	padding: 20px;
+	border-radius: 2px;
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.30);
+	font-size: 12px;
+	width: 35%;
+}
+
+@media(max-width: 1100px){
+	.flexboxItem{
+		width: 80%;
+	}
+
+	.mainHeader{
+		height: 50%;
+	}
+}
+
+.widthLarge{
+	width: 100%;
+}
+
+
+.dateText{
+	color: gray;
+}
+
+.line{
+	height: 1px;
+	width: 90%;
+	background-color: #e8e8e8;
+	border-bottom: 3px;
+	margin: 50px auto 50px auto;
+}
