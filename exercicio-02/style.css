@@ -181,7 +181,6 @@ form div > input[type=submit]:hover{
 }
 
 /*Footer*/
-
 footer > p{
 	font-size: 0.7em;
 	width: 100%;
@@ -256,7 +255,7 @@ footer nav{
 	}
 
 	footer > p{
-		font-size: 10px;
+		font-size: 10%;
 	}
 
 	form label{
