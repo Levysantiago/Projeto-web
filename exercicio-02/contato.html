@@ -10,9 +10,11 @@
 <body>
 	<!-- MENU -->
 	<header>
+		<input type="checkbox" id="bt_menu">
+		<label for="bt_menu"></label>
 		<nav>
 			<a href="./index.html">Principal</a>
-			<a href="./publicacoes.html">Publiações</a>
+			<a href="./publicacoes.html">Publicações</a>
 			<a href="./projetos.html">Projetos</a>
 			<a href="./contato.html">Contato</a>
 		</nav>
@@ -20,19 +22,22 @@
 	</header>
 
 	<section>
-		<article>
-			<h2>Formulário de contato</h2>
+		<h2 id="h2-contato">Formulário de contato</h2>
 
+		<article>
 			<form>
 				<div>
 					<label>Seu Nome*: </label>
-					<input type="text" name="nome"><br/><br/>
+					<input type="text" name="nome" placeholder="Nome Sobrenome"><br/><br/>
 					<label>Seu Email*: </label>
-					<input type="email" name="email"><br/><br/>
+					<input type="email" name="email" placeholder="exemplo@gmail.com"><br/><br/>
 					<label>Assunto*: </label>
 					<input type="text" name="assunto"><br/><br/>
 					<label>Sua Mensagem*: </label><br/>
-					<textarea name="message" rows="10" cols="30" placeholder="Insira sua mensagem aqui."></textarea><br/>
+					<textarea rows="10" cols="30" placeholder="Insira sua mensagem aqui..."></textarea>
+					<br/>
+				</div>
+				<div>
 					<input type="submit" name="submit">
 				</div>
 			</form>
