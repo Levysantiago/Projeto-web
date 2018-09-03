@@ -23,7 +23,7 @@ h2{
 
 /*Header*/
 header{
-	height: 150px;
+	height: 250px;
 	margin-bottom: 80px;
 }
 
@@ -37,7 +37,7 @@ header > nav, footer nav{
 }
 
 header > h1{
-	line-height: 100px;
+	line-height: 300px;
 	font-size: 60px;
 	font-family: "brandon-grotesque", Brandon Grotesque, Helvetica Neue, Helvetica, Arial, sans-serif;
 	text-align: center;
@@ -75,17 +75,19 @@ header > nav a:hover, footer nav a:hover{
 
 label[for="bt_menu"]{
 	background: url(imgs/menu-icon-dark.png) no-repeat;
+	background-size: cover;
 	margin-bottom: 10px;
 	padding: 5px;
-	width: 8%;
-	height: 7%;
+	margin-right: 5%;
+	width: 15%;
+	height: 20%;
 	float: right;
-	top: 0px;
 }
 
 #main-menu-icon{
 	margin-bottom: 0px;
 	background: url(imgs/menu-icon.png) no-repeat;
+	background-size: cover;
 }
 
 label[for="bt_menu"]{
@@ -311,12 +313,18 @@ footer div.flexbox > div > p:first-child{
 		margin-top: 10px;
 	}
 
+	#main-menu-icon{
+		width: 15%;
+		height: 10%;
+	}
+
 	header{
-		height: 280px;
+		height: 800px;
 	}
 
 	header > nav{
-		line-height: 45px;
+		font-size: 2.0em;
+		line-height: 100px;
 		display: grid;
 		width: 100%;
 	}
