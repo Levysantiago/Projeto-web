@@ -6,3 +6,7 @@ Este é um repositório para a matéria de Programação Web. São requisitados 
 - **Exercicio-01 - EXERCÍCIO SOBRE HTML**
 	- Objetivo: Criar a estrutura e o conteúdo de um site web estático usando os elementos do padrão
 HTML 5.0 discutidos em sala de aula.
+
+- **Exercicio-02 - EXERCÍCIO SOBRE CSS**
+	- Objetivo: Criar o layout, formatação e apresentação de um site web estático usando os elementos
+do padrão CSS discutidos em sala de aulas.
