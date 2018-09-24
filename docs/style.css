@@ -7,290 +7,55 @@
 	color: #353535;
 }
 
-html, body{
-	height: 100%;
-	width: 100%;
-}
-
-a{
-	text-decoration: none;
-}
-
-h2{
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
-/*Header*/
-header{
-	height: 150px;
-	margin-bottom: 80px;
-}
-
-nav{
-	font-size: 18px;
-}
-
-header > nav, footer nav{
-	text-align: right;
-	line-height: 80px;
-}
-
-header > h1{
-	line-height: 100px;
-	font-size: 60px;
-	font-family: "brandon-grotesque", "Brandon Grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-align: center;
-}
-
-header.mainHeader > div{
-	top: 40%;
-	position: absolute;
-	font-size: 40px;
-	width: 100%;
-	text-align: center;
-}
-
-header.mainHeader > div > h1{
-	font-family: "Raleway", sans-serif;
-	color: white;
-}
-
-header > nav > a, footer nav > a{
-	height: 100%;
-	width: 100px;
-	text-align: center;
-	margin-right: 30px;
-	color: black;
-}
-
-header.mainHeader a{
-	color: white;
-}
-
-header > nav > a:hover, footer nav > a:hover{
-	font-weight: bold;
-	border-bottom: 2px solid;
-}
-
-/*Conteúdo*/
-section{
-	background-color: white;
-	font-family: "Nunito", sans-serif;
-	position: relative;
-	padding-left: 8%;
-	padding-right: 8%;
-	font-size:1.3em;
-}
-
-div.flexboxItem > p{
+p{
 	font-size: 15px;
-	margin-bottom: 5px;
 }
 
-div.flexboxItem > p.dateText{
-	font-size: 10px;
+h1, h2{
+	color: #424242;
 }
 
-div.flexboxItem > p:first-child{
-	font-size: 20px;
-	color: #1970aa;
-	font-weight: bold;
-}
-
-div.flexboxItem > p > a{
-	text-decoration: none;
-	color: inherit;
-}
-
-div.flexboxItem > p > a:hover{
-	color: #47bce8;
-	font-weight: bold;
-}
-
-div.flexboxItem > a > img{
-	width: 20%;
-}
-
-/*Formulario de Contato*/
-#h2-contato{
-	text-align: center;
-}
-
-form{
-	width: 100%;
-	padding: 3%;
-}
-
-form > div:first-child{
-	margin-left: 0%;
-}
-
-form input, form textarea{
-	font-family: "brandon-grotesque", "Brandon Grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	width: 70%;
-	font-size: 14px;
-	max-width: 500px;
-}
-
-::placeholder{
-	color: #c0c0c0; /* Chrome, Firefox, Opera, Safari 10.1+ */
-	opacity: 1; /*Firefox*/
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #c0c0c0;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: #c0c0c0;
-}
-
-form textarea{
-	margin-left: 0%;
-}
-
-form label {
-	font-size: 1.0em;
-	padding: 12px 12px 12px 0;
-	display: inline-block;
-	width: 25%;
-}
-
-form > div:nth-child(2){
-	width: 100%;
-	text-align: center;
-}
-
-form div > input[type=submit] {
-	background-color: #348e38;
-	color: white;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	width: 10vw;
-	margin-top: 10px;
-	cursor: pointer;
-}
-
-form div > input[type=submit]:hover{
-	background-color: #399b3d;
-}
-
-/*Footer*/
-
-footer > p{
-	font-size: 0.7em;
-	width: 100%;
-	text-align: center;
-	margin: 0px auto 20px auto;
-}
-
-footer div.flexbox > div{
-	width: 400px;
-	margin-bottom: 10px;
-}
-
-footer div.flexbox > div.flexbox{
-	flex-direction: column;
-}
-
-footer div.flexbox > div > img{
-	float: left;
-	margin-right: 20px;
-}
-
-footer div.flexbox > div > p{
-	margin-top: 6px;
-	font-size: 1.3em;
-}
-
-footer div.flexbox > div > p:first-child{
-	font-size: 20px;
-	color: #999a9b;
-}
-
-footer nav{
-	text-align: center;
-}
-
-.mainHeader{
-	background: url(imgs/principal.png) no-repeat 50% 50%;
-	background-size: cover;
+html, body, .mainHeader{
 	height: 100%;
 	width: 100%;
-	margin-bottom: 30px;
 }
 
-.flexbox{
-	align-items: baseline;
-	height: auto;
-	justify-content: center;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
+header{
+	margin-bottom: 50px;
 }
 
-.flexboxItem {
-	margin: 20px 40px 20px 0px;
-	background-color: white;
-	height: auto;
-	min-width: 100px;
-	padding: 20px;
-	border-radius: 2px;
-	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.30);
-	font-size: 12px;
-	width: 35%;
+header h1{
+	text-align: center;
 }
 
-@media(max-width: 1100px){
-	.flexboxItem{
-		width: 100%;
-	}
-
-	section{
-		font-size: 14px;
-	}
-
-	footer > p{
-		font-size: 10px;
-	}
-
-	form label{
-		font-size: 20px;
-	}
-
-	form > div:first-child{
-		margin-left: 20%;
-	}
-
-	header > nav > a, footer nav > a{
-		font-size: 1.5em;
-	}
+.mainHeader h1{
+	line-height: 100vh;
+	font-size: 60px;
+	font-family: "Raleway", sans-serif;
 }
 
-@media(min-width: 1290px){
-	form textarea{
-		margin-left: 26%;
-	}
+header .parallax-container, header .parallax{
+	height: 100%;
 }
-
-.widthLarge{
-	width: 100%;
-}
-
 
 .dateText{
 	color: gray;
+	font-size: 10px;
 }
 
-.line{
-	height: 1px;
-	width: 90%;
-	background-color: #e8e8e8;
-	border-bottom: 3px;
-	margin: 50px auto 50px auto;
+.divider{
+	width: 90%; 
+	margin-left: 5%;
+}
+
+.multiline-ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mainHeader{
+	margin: 0px;
 }

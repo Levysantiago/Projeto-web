@@ -5,75 +5,134 @@
 	<title>Contato</title>
 
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 	<!-- MENU -->
 	<header>
-		<nav>
-			<a href="./index.html">Principal</a>
-			<a href="./publicacoes.html">Publicações</a>
-			<a href="./projetos.html">Projetos</a>
-			<a href="./contato.html">Contato</a>
-		</nav>
-		<h1>Contato</h1>
+		<div class="parallax-container">
+	      	<nav class="transparent z-depth-0">
+			    <div class="nav-wrapper">
+			      <ul id="nav-mobile" class="right">
+			        <li><a class="black-text" href="./index.html">Principal</a></li>
+			        <li><a class="black-text" href="./publicacoes.html">Publicações</a></li>
+			        <li><a class="black-text" href="./projetos.html">Projetos</a></li>
+			        <li><a class="black-text" href="./contato.html">Contato</a></li>
+			      </ul>
+			    </div>
+			</nav>
+
+	      	<h1>Contato</h1>
+	    </div>
 	</header>
 
-	<section>
-		<h2 id="h2-contato">Formulário de contato</h2>
+	<div class="container">
+		<section>
+			<article>
 
-		<article>
-			<form>
-				<div>
-					<label>Seu Nome*: </label>
-					<input type="text" name="nome" placeholder="Nome Sobrenome"><br/><br/>
-					<label>Seu Email*: </label>
-					<input type="email" name="email" placeholder="exemplo@gmail.com"><br/><br/>
-					<label>Assunto*: </label>
-					<input type="text" name="assunto"><br/><br/>
-					<label>Sua Mensagem*: </label><br/>
-					<textarea rows="10" cols="30" placeholder="Insira sua mensagem aqui..."></textarea>
-					<br/>
-				</div>
-				<div>
-					<input type="submit" name="submit">
-				</div>
-			</form>
-		</article>
-	</section>
+				<!-- CARD DE CONTATO -->
+		  		<div class="row">
+		        <div class="col s12">
+		          <div class="card white">
+		            <div class="card-content">
+		              <span class="card-title">Formulário de contato</span>
+		              <div class="row">
+		                <form class="col s12">
+							<div class="input-field col s6">
+							  <input id="first_name" type="text" class="validate">
+							  <label for="first_name">Primeiro Nome</label>
+							</div>
+
+							<div class="input-field col s6">
+					          <input id="last_name" type="text" class="validate">
+					          <label for="last_name">Último Nome</label>
+					        </div>
+
+					        <div class="input-field col s12">
+					          <input id="email" type="email" class="validate">
+					          <label for="email">Email</label>
+					        </div>
+
+					        <div class="input-field col s12">
+								<input type="text" name="assunto">
+								<label>Assunto </label>
+					        </div>
+
+		                    <div class="input-field col s12">
+		                      <textarea id="descricao" class="materialize-textarea" data-length="200"></textarea>
+		                      <label for="descricao">Descrição</label>
+		                    </div>
+						</form>
+		              </div>
+		            </div>
+		            <div class="card-action">
+		              <div class="row">
+		                <a class="waves-effect waves-light btn green col s4 l2 offset-s4 offset-l5">enviar</a>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <!-- / CARD DE CONTATO -->
+			</article>
+		</section>
+	</div>
 	
 	<!-- FOOTER -->
-	<footer>
-		<div class="line"></div>
-		<div>
-			<div class="flexbox">
-				<div class="flexbox">
-					<div>
-						<img src="imgs/email.png" alt="Endereço de email" />
-						<p>levyssantiago@gmail.com</p>
-					</div>
-					<div>
-						<img src="imgs/github-circle.png" alt="Usuário github" />
-						<p>levysantiago</p>
-					</div>
+	<div class="divider"></div>
+	<footer class="page-footer white">
+      <div class="container">
+        <div class="row">
+          <div class="col l4 m6 s12">
+            <h5 class="grey-text">Sobre</h5>
+            <ul>
+              <p class="text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et elementum arcu. Quisque eu sollicitudin lacus.</p>
+            </ul>
+          </div>
+          <div class="col l6 offset-l2 m6 s12">
+            <h5 class="grey-text">Contato</h5>
+            <div class="row">
+            	<div class="col s1 m2 l1">
+	                <i class="small material-icons" alt="Endereço de email">email</i>
 				</div>
-
-				<div>
-					<p>Sobre</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et elementum arcu. Quisque eu sollicitudin lacus.</p>
+				<div class="col s1">
+					<p class="text-lighten-4">levyssantiago@gmail.com</p></p>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col s1 m2 l1">
+					<img class="small material-icons" src="imgs/github-circle.png" alt="Usuário github" />
+				</div>
+				<div class="col s1">
+					<p class="text-lighten-4">levysantiago</p></p>
+				</div>
+			</div>
+          </div>
+          
+        </div>
+      </div>
 
-			<nav>
-				<a href="./index.html">Principal</a>
-				<a href="./publicacoes.html">Publiações</a>
-				<a href="./projetos.html">Projetos</a>
-				<a href="./contato.html">Contato</a>
-			</nav>
-		</div>
+      <div class="footer-copyright blue-grey darken-3">
+        <div class="container">
+        <nav class="transparent z-depth-0">
+		    <div class="nav-wrapper">
+		      <ul id="nav-mobile" class="right">
+		        <li><a href="./index.html">Principal</a></li>
+		        <li><a href="./publicacoes.html">Publicações</a></li>
+		        <li><a href="./projetos.html">Projetos</a></li>
+		        <li><a href="./contato.html">Contato</a></li>
+		      </ul>
+		    </div>
+		</nav>
+        </div>
+      </div>
+    </footer>
 
-		<p>Desenvolvido por Levy Santiago</p>
-	</footer>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 	<script src = "script/scripts.js"></script>
 
 </body>
 </html>
