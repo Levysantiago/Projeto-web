@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portifolio ADM</title>
+
+  <link rel="stylesheet" type="text/css" href="admStyle.css">
+	<!-- Compiled and minified CSS (Materialize) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+	<header>
+		<nav class="blue-grey darken-3">
+		    <div class="nav-wrapper">
+		      <ul id="nav-mobile" class="left">
+		        <li><a href="admPublicacoes.html">Publicações</a></li>
+            <li><a href="admProjetos.html">Projetos</a></li>
+		      </ul>
+		    </div>
+		</nav>
+
+    <h1 class="center-align">Projetos</h1>
+	</header>
+
+  <main>
+  	<section>
+      <!-- CARD DE CADASTRO PROJETOS -->
+  		<div class="row">
+        <div class="col s12 m10 offset-m1">
+          <div class="card white">
+            <div class="card-content">
+              <span class="card-title">Adicionar novo projeto</span>
+              <div class="row">
+                <form class="col s12">
+                  
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input type="text" id="titulo" placeholder="Ex.: Meu Projeto" class="validate">
+                      <label for="titulo">Título</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="descricao" placeholder="Ex.: Este projeto tem como objetivo..." class="materialize-textarea" data-length="200"></textarea>
+                      <label for="descricao">Descrição</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input type="text" id="link" placeholder="Ex.: http://meuprojeto.com" class="validate">
+                      <label for="link">Link para conteúdo/página</label>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+            <div class="card-action">
+              <div class="row">
+                <a class="waves-effect waves-light btn green col s4 l2 offset-s4 offset-l5">Confirmar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / CARD DE CADASTRO PROJETOS -->
+
+      <h2 class="center-align">Projetos cadastrados</h2>
+
+      <div class="container">
+        <div class="row">
+        <div class="col s12 m6">
+          <div class="card white hoverable">
+            <div class="card-content white">
+              <span class="card-title activator grey-text text-darken-4">ta5ks
+                <i class="material-icons right">more_vert</i>
+              </span>
+              <p>Sed nec laoreet urna, vitae volutpat nunc. Proin facilisis erat convallis sapien mattis auctor. Phasellus non egestas libero, nec laoreet purus. Maecenas luctus luctus libero. Nullam porta mauris non eleifend pretium. Proin id risus diam. Quisque aliquet maximus neque. Nullam eu arcu arcu. Vivamus tellus justo, congue id orci eu, iaculis ullamcorper ante.</p>
+            </div>
+            <div class="card-reveal blue-grey darken-3">
+              <span class="card-title white-text text-darken-4 truncate">ta5ks
+                <i class="material-icons right">close</i>
+              </span>
+              <div class="row"></div>
+              <div class="row">
+                <a class="waves-effect waves-light btn blue darken-2 col s6 offset-s3">editar</a>
+              </div>
+              <div class="row">
+                <a class="waves-effect waves-light btn red darken-4 col s4 offset-s4">excluir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card white hoverable">
+            <div class="card-content white">
+              <span class="card-title activator grey-text text-darken-4">MathKids
+                <i class="material-icons right">more_vert</i>
+              </span>
+              <p>Aenean et ipsum pretium, efficitur odio id, suscipit nulla. Pellentesque velit ligula, egestas nec hendrerit a, maximus vitae leo. Integer sed congue tortor. Mauris non lectus luctus, ornare velit id, consectetur nunc. Ut id quam eget dolor tempor bibendum sed at est. In lobortis massa at dapibus efficitur. Vivamus elit sapien, iaculis ut tortor sed, lobortis sollicitudin metus.</p>
+            </div>
+            <div class="card-reveal blue-grey darken-3">
+              <span class="card-title white-text text-darken-4 truncate">MathKids
+                <i class="material-icons right">close</i>
+              </span>
+              <div class="row"></div>
+              <div class="row">
+                <a class="waves-effect waves-light btn blue darken-2 col s6 offset-s3">editar</a>
+              </div>
+              <div class="row">
+                <a class="waves-effect waves-light btn red darken-4 col s4 offset-s4">excluir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  	</section>
+  </main>
+	
+	<footer class="page-footer blue-grey darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="row">
+        	<a class="col s6 grey-text text-lighten-4" href="admPublicacoes.html">Publicações</a>
+        	<a class="col s6 grey-text text-lighten-4" href="admProjetos.html">Projetos</a>
+        </div>
+      </div>
+    </footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src = "script/scripts.js"></script>
+
+</body>
+</html>
