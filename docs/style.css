@@ -7,15 +7,40 @@
 	color: #353535;
 }
 
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+#main-nav > div > ul a{
+	color: white;	
+}
+
+nav > div > ul a {
+	font-family: "Raleway", sans-serif;
+	font-weight: bold;
+    font-size: 18px;
+    color: #424242;
+}
+
+footer nav > div > ul a{
+	color: #e0e0e0;
+}
+
 p{
-	font-size: 15px;
+	font-size: 18px;
 }
 
 h1, h2{
 	color: #424242;
 }
 
-html, body, .mainHeader{
+html, body, #main-header{
 	height: 100%;
 	width: 100%;
 }
@@ -28,7 +53,7 @@ header h1{
 	text-align: center;
 }
 
-.mainHeader h1{
+#main-header h1{
 	line-height: 100vh;
 	font-size: 60px;
 	font-family: "Raleway", sans-serif;
@@ -56,6 +81,6 @@ header .parallax-container, header .parallax{
     text-overflow: ellipsis;
 }
 
-.mainHeader{
+#main-header{
 	margin: 0px;
 }

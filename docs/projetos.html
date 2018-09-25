@@ -14,20 +14,28 @@
 		<div class="parallax-container">
 	      	<nav class="transparent z-depth-0">
 			    <div class="nav-wrapper">
-			      <ul id="nav-mobile" class="right">
-			        <li><a class="black-text" href="./index.html">Principal</a></li>
-			        <li><a class="black-text" href="./publicacoes.html">Publicações</a></li>
-			        <li><a class="black-text" href="./projetos.html">Projetos</a></li>
-			        <li><a class="black-text" href="./contato.html">Contato</a></li>
+			      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img width="90px" src="imgs/menu.png"></a>
+			      <ul class="right hide-on-med-and-down">
+			        <li><a href="./index.html">Principal</a></li>
+			        <li><a href="./publicacoes.html">Publicações</a></li>
+			        <li><a href="./projetos.html">Projetos</a></li>
+			        <li><a href="./contato.html">Contato</a></li>
 			      </ul>
 			    </div>
 			</nav>
+
+			<ul class="sidenav" id="mobile-demo">
+			    <li><a href="./index.html">Principal</a></li>
+			    <li><a href="./publicacoes.html">Publicações</a></li>
+			    <li><a href="./projetos.html">Projetos</a></li>
+			    <li><a href="./contato.html">Contato</a></li>
+			</ul>
 
 	      	<h1>Projetos</h1>
 	    </div>
 	</header>
 
-	<div class="container">
+	<main class="container">
 		<section>
 			<article>
 				<p>
@@ -83,7 +91,7 @@
 			</article>
 
 		</section>
-	</div>
+	</main>
 	
 	<!-- FOOTER -->
 	<div class="divider"></div>
@@ -135,8 +143,9 @@
       </div>
     </footer>
 
-	<!-- Compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 	<script src="script/scripts.js"></script>
 
 </body>
 </html>
