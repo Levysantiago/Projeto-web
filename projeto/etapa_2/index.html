@@ -10,11 +10,12 @@
 </head>
 <body>
 	<!-- MENU -->
-	<header class="mainHeader">
+	<header id="main-header">
 		<div class="parallax-container">
-	      	<nav class="transparent z-depth-0">
+	      	<nav id="main-nav" class="transparent z-depth-0">
 			    <div class="nav-wrapper">
-			      <ul id="nav-mobile" class="right">
+			      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img width="90px" src="imgs/menu-white.png"></a>
+			      <ul class="right hide-on-med-and-down">
 			        <li><a href="./index.html">Principal</a></li>
 			        <li><a href="./publicacoes.html">Publicações</a></li>
 			        <li><a href="./projetos.html">Projetos</a></li>
@@ -22,6 +23,13 @@
 			      </ul>
 			    </div>
 			</nav>
+
+			<ul class="sidenav" id="mobile-demo">
+			    <li><a href="./index.html">Principal</a></li>
+			    <li><a href="./publicacoes.html">Publicações</a></li>
+			    <li><a href="./projetos.html">Projetos</a></li>
+			    <li><a href="./contato.html">Contato</a></li>
+			</ul>
 
 	      	<div class="parallax">
 	      		<img src="imgs/principalBig.png" height="1300px" />
