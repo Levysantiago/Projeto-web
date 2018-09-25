@@ -84,3 +84,17 @@ header .parallax-container, header .parallax{
 #main-header{
 	margin: 0px;
 }
+
+ul.sidenav{
+	width: 80%;
+}
+
+ul.sidenav > li{
+	height: 6%;
+}
+
+ul.sidenav > li > a{
+	height: 100%;
+	padding: 3% 3% 3% 8%;
+	font-size: 30px;
+}
