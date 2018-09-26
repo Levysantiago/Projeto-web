@@ -98,3 +98,29 @@ ul.sidenav > li > a{
 	padding: 3% 3% 3% 8%;
 	font-size: 30px;
 }
+
+@media screen and (orientation:landscape) {
+	ul.sidenav{
+		width: 80%;
+	}
+
+	ul.sidenav > li{
+		height: 20%;
+	}
+
+	ul.sidenav > li > a{
+		height: 100%;
+		padding: 3% 3% 3% 8%;
+		font-size: 30px;
+	}	
+}
+
+@media only screen and (max-width: 1000px) {
+    p{
+		font-size: 22px;
+	}
+
+	form > div > label{
+		font-size: 22px;
+	}
+}
