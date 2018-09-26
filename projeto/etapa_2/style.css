@@ -63,6 +63,10 @@ header .parallax-container, header .parallax{
 	height: 100%;
 }
 
+div.card-content > span.card-title{
+	color: #0d47a1;
+}
+
 .dateText{
 	color: gray;
 	font-size: 10px;
@@ -85,7 +89,36 @@ header .parallax-container, header .parallax{
 	margin: 0px;
 }
 
-ul.sidenav{
+.img-footer{
+	margin-right: 20px;
+	width: 70px;
+}
+
+nav > div > ul {
+    float: right;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav > div > ul a {
+	    font-size: 14px;
+	}
+
+	nav > div > ul {
+	    float: none;
+	}
+
+	#main-header h1{
+		font-size: 35px;
+	}
+}
+
+
+
+
+
+
+
+/*ul.sidenav{
 	width: 80%;
 }
 
@@ -101,9 +134,9 @@ ul.sidenav > li > a{
 
 div.card-content > span.card-title{
 	color: #0d47a1;
-}
+}*/
 
-@media screen and (orientation:landscape) {
+/*@media screen and (orientation:landscape) {
 	ul.sidenav{
 		width: 80%;
 	}
@@ -117,26 +150,4 @@ div.card-content > span.card-title{
 		padding: 3% 3% 3% 8%;
 		font-size: 30px;
 	}	
-}
-
-@media only screen and (max-width: 1000px) {
-    p{
-		font-size: 30px;
-	}
-
-	div.card-content p{
-		font-size: 25px;
-	}
-
-	div.card-content p.dateText{
-		font-size: 20px;
-	}
-
-	div.card-content > span.card-title{
-		font-size: 30px;
-	}
-
-	.multiline-ellipsis {
-	    -webkit-line-clamp: 4;
-	}
-}
+}*/

@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<!-- MENU -->
@@ -14,7 +15,7 @@
 		<div class="parallax-container">
 	      	<nav class="transparent z-depth-0">
 			    <div class="nav-wrapper">
-			      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img width="90px" src="imgs/menu.png"></a>
+			      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><img src="imgs/menu.png"></a>
 			      <ul class="right hide-on-med-and-down">
 			        <li><a href="./index.html">Principal</a></li>
 			        <li><a href="./publicacoes.html">Publicações</a></li>
@@ -47,12 +48,12 @@
 		              <span class="card-title">Formulário de contato</span>
 		              <div class="row">
 		                <form class="col s12">
-							<div class="input-field col s6">
+							<div class="input-field col s12 l6">
 							  <input id="first_name" type="text" class="validate">
 							  <label for="first_name">Primeiro Nome</label>
 							</div>
 
-							<div class="input-field col s6">
+							<div class="input-field col s12 l6">
 					          <input id="last_name" type="text" class="validate">
 					          <label for="last_name">Último Nome</label>
 					        </div>
@@ -88,54 +89,49 @@
 	</main>
 	
 	<!-- FOOTER -->
-	<div class="divider"></div>
 	<footer class="page-footer white">
-      <div class="container">
-        <div class="row">
-          <div class="col l4 m6 s12">
-            <h4 class="grey-text">Sobre</h4>
-            <ul>
-              <p class="text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et elementum arcu. Quisque eu sollicitudin lacus.</p>
-            </ul>
-          </div>
-          <div class="col l6 offset-l2 m6 s12">
-            <h4 class="grey-text">Contato</h4>
+		<div class="divider"></div>
+          <div class="container">
             <div class="row">
-            	<div class="col s1 m2">
-	                <i class="medium material-icons" alt="Endereço de email">email</i>
+              <div class="col l4 m6 s12">
+                <h4 class="grey-text">Sobre</h4>
+                <ul>
+                  <p class="text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et elementum arcu. Quisque eu sollicitudin lacus.</p>
+                </ul>
+              </div>
+              <div class="col l6 offset-l2 m6 s12">
+                <h4 class="grey-text">Contato</h4>
+                <div class="row">
+                	<div class="col s1 m2 valign-wrapper">
+		                <i class="medium material-icons img-footer" alt="Endereço de email">email</i>
+						<p class="text-lighten-4 left-align">levyssantiago@gmail.com</p></p>
+					</div>
 				</div>
-				<div class="col s1">
-					<p class="text-lighten-4">levyssantiago@gmail.com</p></p>
+				<div class="row">
+					<div class="col s1 m2 valign-wrapper">
+						<img class="img-footer" src="imgs/github-circle.jpg" alt="Usuário github" />
+						<p class="text-lighten-4">levysantiago</p>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col s1 m2">
-					<img src="imgs/github-circle.jpg" alt="Usuário github" />
-				</div>
-				<div class="col s1">
-					<p class="text-lighten-4">levysantiago</p></p>
-				</div>
-			</div>
+              </div>
+              
+            </div>
           </div>
-          
-        </div>
-      </div>
 
-      <div class="footer-copyright blue-grey darken-3">
-        <div class="container">
-        <nav class="transparent z-depth-0">
-		    <div class="nav-wrapper">
-		      <ul id="nav-mobile" class="right">
-		        <li><a href="./index.html">Principal</a></li>
-		        <li><a href="./publicacoes.html">Publicações</a></li>
-		        <li><a href="./projetos.html">Projetos</a></li>
-		        <li><a href="./contato.html">Contato</a></li>
-		      </ul>
-		    </div>
-		</nav>
-        </div>
-      </div>
-    </footer>
+			<div class="footer-copyright blue-grey darken-3">
+		            <nav class="transparent z-depth-0">
+					    <div class="nav-wrapper">
+					      <ul class="right">
+					        <li><a href="./index.html">Principal</a></li>
+					        <li><a href="./publicacoes.html">Publicações</a></li>
+					        <li><a href="./projetos.html">Projetos</a></li>
+					        <li><a href="./contato.html">Contato</a></li>
+					      </ul>
+					    </div>
+					</nav>
+	            
+			</div>
+        </footer>
 
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
