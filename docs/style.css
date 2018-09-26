@@ -99,6 +99,10 @@ ul.sidenav > li > a{
 	font-size: 30px;
 }
 
+div.card-content > span.card-title{
+	color: #0d47a1;
+}
+
 @media screen and (orientation:landscape) {
 	ul.sidenav{
 		width: 80%;
@@ -117,10 +121,22 @@ ul.sidenav > li > a{
 
 @media only screen and (max-width: 1000px) {
     p{
-		font-size: 22px;
+		font-size: 30px;
 	}
 
-	form > div > label{
-		font-size: 22px;
+	div.card-content p{
+		font-size: 25px;
+	}
+
+	div.card-content p.dateText{
+		font-size: 20px;
+	}
+
+	div.card-content > span.card-title{
+		font-size: 30px;
+	}
+
+	.multiline-ellipsis {
+	    -webkit-line-clamp: 4;
 	}
 }
