@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('textarea#mensagem').characterCounter();
   $('textarea#descricao').characterCounter();
 });
 

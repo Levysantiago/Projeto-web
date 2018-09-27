@@ -7,6 +7,7 @@
 	<!-- Compiled and minified CSS (Materialize) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -23,11 +24,11 @@
     <h1 class="center-align">Publicações</h1>
 	</header>
 
-  <main>
+  <main class="container">
   	<section>
       <!-- CARD DE CADASTRO PUBLICAÇÃO -->
   		<div class="row">
-        <div class="col s12 m10 offset-m1">
+        <div class="col s12">
           <div class="card white">
             <div class="card-content">
               <span class="card-title">Adicionar nova publicação</span>
@@ -36,14 +37,14 @@
                   
                   <div class="row">
                     <div class="input-field col s12">
-                      <input type="text" id="titulo" placeholder="Ex.: Aplicando Internet das Coisas na medicina" class="validate">
+                      <input type="text" id="titulo" placeholder="Ex.: Aplicando Internet das Coisas na medicina" class="validate truncate">
                       <label for="titulo">Título</label>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="input-field col s12 m6">
-                      <input type="text" id="evento" placeholder="Ex.: VI Congresso Brasileiro de Informática" class="validate">
+                      <input type="text" id="evento" placeholder="Ex.: VI Congresso Brasileiro de Informática" class="validate truncate">
                       <label for="evento">Evento/Congresso</label>
                     </div>
 
@@ -55,7 +56,7 @@
 
                   <div class="row">
                     <div class="input-field col s12 m9">
-                      <input type="text" id="anais" placeholder="Ex.: Anais dos Workshops do Congresso Brasileiro de Informática" class="validate">
+                      <input type="text" id="anais" placeholder="Ex.: Anais dos Workshops do Congresso Brasileiro de Informática" class="validate truncate">
                       <label for="anais">Anais da publicação</label>
                     </div>
 
@@ -94,7 +95,7 @@
 
       <div>
         <div class="row">
-        <div class="col s12 m10 offset-m1">
+        <div class="col s12">
           <div class="card white hoverable">
             <div class="card-content white">
               <span class="card-title activator grey-text text-darken-4">Avaliação de linguagens visuais de programação no ensino médio a partir da utilização do conceito de Robótica Pedagógica.
@@ -128,20 +129,15 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <h5 class="white-text">Sobre</h5>
+            <p class="grey-text text-lighten-4">Sistema administrativo de portifólio criado por Levy Santiago</p>
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            </ul>
           </div>
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="row">
+        <div class="row right">
         	<a class="col s6 grey-text text-lighten-4" href="admPublicacoes.html">Publicações</a>
           <a class="col s6 grey-text text-lighten-4" href="admProjetos.html">Projetos</a>
         </div>

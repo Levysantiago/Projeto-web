@@ -5,6 +5,7 @@
 
 	<!-- Compiled and minified CSS (Materialize) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -12,31 +13,33 @@
 		<h1 class="center-align">Página de Login</h1>
 	</header>
 
-	<section>
-		<div class="valign-wrapper row login-box">
-		  <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
-		    <form>
-		      <div class="card-content">
-		        <span class="card-title">Realize seu login</span>
-		        <div class="row">
-		          <div class="input-field col s12">
-		            <label for="email">Usuário</label>
-		            <input type="email" class="validate" name="email" id="email" />
-		          </div>
-		          <div class="input-field col s12">
-		            <label for="password">Senha</label>
-		            <input type="password" class="validate" name="password" id="password" />
-		          </div>
-		        </div>
-		      </div>
-		      <div class="card-action right-align">
-		        <!-- <input type="reset" id="reset" class="btn-flat grey-text waves-effect"> -->
-		        <button class="btn green waves-effect waves-light" type="submit" name="action">Login</button>
-		      </div>
-		    </form>
-		  </div>
-		</div>
-  </section>
+	<main class="container">
+		<section>
+			<div class="valign-wrapper row login-box">
+			  <div class="col card hoverable s12 m6 offset-m3">
+			    <form>
+			      <div class="card-content">
+			        <span class="card-title">Realize seu login</span>
+			        <div class="row">
+			          <div class="input-field col s12">
+			            <label for="email">Usuário</label>
+			            <input type="email" class="validate" name="email" id="email" />
+			          </div>
+			          <div class="input-field col s12">
+			            <label for="password">Senha</label>
+			            <input type="password" class="validate" name="password" id="password" />
+			          </div>
+			        </div>
+			      </div>
+			      <div class="card-action right-align">
+			        <!-- <input type="reset" id="reset" class="btn-flat grey-text waves-effect"> -->
+			        <button class="btn green waves-effect waves-light" type="submit" name="action">Login</button>
+			      </div>
+			    </form>
+			  </div>
+			</div>
+	  </section>
+	</main>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- Compiled and minified JavaScript -->
