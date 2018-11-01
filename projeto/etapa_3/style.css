@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+*{
+	margin: 0px;
+	padding: 0px;
+	color: #353535;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+#main-nav > div > ul a{
+	color: white;	
+}
+
+nav > div > ul a {
+	font-family: "Raleway", sans-serif;
+	font-weight: bold;
+    font-size: 18px;
+    color: #424242;
+}
+
+footer nav > div > ul a{
+	color: #e0e0e0;
+}
+
+p{
+	font-size: 18px;
+}
+
+h1, h2{
+	color: #424242;
+}
+
+html, body, #main-header{
+	height: 100%;
+	width: 100%;
+}
+
+header{
+	margin-bottom: 50px;
+}
+
+header h1{
+	text-align: center;
+}
+
+#main-header h1{
+	line-height: 100vh;
+	font-size: 60px;
+	font-family: "Raleway", sans-serif;
+}
+
+header .parallax-container, header .parallax{
+	height: 100%;
+}
+
+div.card-content > span.card-title{
+	color: #0d47a1;
+}
+
+.dateText{
+	color: gray;
+	font-size: 10px;
+}
+
+.divider{
+	width: 90%; 
+	margin-left: 5%;
+}
+
+.multiline-ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#main-header{
+	margin: 0px;
+}
+
+.img-footer{
+	margin-right: 20px;
+	width: 70px;
+}
+
+nav > div > ul {
+    float: right;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav > div > ul a {
+	    font-size: 14px;
+	}
+
+	nav > div > ul {
+	    float: none;
+	}
+
+	#main-header h1{
+		font-size: 35px;
+	}
+}

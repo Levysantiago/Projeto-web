@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Portifolio ADM</title>
+
+  <link rel="stylesheet" type="text/css" href="admStyle.css">
+  <!-- Compiled and minified CSS (Materialize) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <?php
+    $titulo_error = "";
+    $anais_error = "";
+    $link_error = "";
+    if(isset($_POST['submit'])){
+      if(empty($_POST["titulo"])){
+        $titulo_error = "Título é obrigatório";
+      }else if(empty($_POST["descricao"])){
+        $anais_error = "Anais é obrigatório";
+      }else if(empty($_POST["link"])){
+        $link_error = "Link é obrigatório";
+      }
+    }
+
+  ?>
+
+  <header>
+    <nav class="blue-grey darken-3">
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="left">
+          <li><a href="admPublicacoes.php">Publicações</a></li>
+          <li><a href="admProjetos.php">Projetos</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="center-align">Publicações</h1>
+  </header>
+
+  <main class="container">
+    <section>
+      <!-- CARD DE CADASTRO PUBLICAÇÃO -->
+      <div class="row">
+        <div class="col s12">
+          <div class="card white">
+            <div class="card-content">
+              <span class="card-title">Adicionar nova publicação</span>
+              <div class="row">
+                <form name="form" class="col s12" action="" method="POST" onsubmit="return validaFormPublicacoes(this);">
+
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input type="text" id="titulo" name="titulo" placeholder="Ex.: Aplicando Internet das Coisas na medicina"
+                        class="validate truncate">
+                      <label for="titulo">Título</label>
+                      <?php echo "<span class=\"helper-text red-text\" data-error=\"Título é obrigadório\">$titulo_error</span>" ?>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col s12 m6">
+                      <input type="text" id="evento" name="evento" placeholder="Ex.: VI Congresso Brasileiro de Informática" class="validate truncate">
+                      <label for="evento">Evento/Congresso</label>
+                    </div>
+
+                    <div class="input-field col m6">
+                      <input type="text" id="cidade" placeholder="Ex.: Itabuna" class="validate">
+                      <label for="cidade">Cidade</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col s12 m9">
+                      <input type="text" id="anais" name="anais" placeholder="Ex.: Anais dos Workshops do Congresso Brasileiro de Informática"
+                        class="validate truncate">
+                      <label for="anais">Anais da publicação</label>
+                      <?php echo "<span class=\"helper-text red-text\" data-error=\"Anais é obrigadório\">$anais_error</span>" ?>
+                    </div>
+
+                    <div class="input-field col m3">
+                      <input type="text" id="paginas" placeholder="Ex.: p. 962-971" class="validate">
+                      <label for="paginas">Páginas</label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col m6">
+                      <input type="text" id="ano" placeholder="Ex.: 2017" class="validate">
+                      <label for="ano">Ano da publicação</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                      <input type="text" id="link" name="link" placeholder="Ex.: http://exemplo.com/anais" class="validate">
+                      <label for="link">Link dos Anais</label>
+                      <?php echo "<span class=\"helper-text red-text\" data-error=\"Link é obrigadório\">$link_error</span>" ?>
+                    </div>
+                  </div>
+
+                  <div class="card-action">
+                    <div class="row">
+                      <button class="waves-effect waves-light btn green col s4 l2 offset-s4 offset-l5" type="submit" name="submit">Confirmar</button>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / CARD DE CADASTRO PUBLICAÇÃO -->
+
+      <h2 class="center-align">Publicações cadastradas</h2>
+
+      <div>
+        <div class="row">
+          <div class="col s12">
+            <div class="card white hoverable">
+              <div class="card-content white">
+                <span class="card-title activator grey-text text-darken-4">Avaliação de linguagens visuais de
+                  programação no ensino médio a partir da utilização do conceito de Robótica Pedagógica.
+                  <i class="material-icons right">more_vert</i>
+                </span>
+                <p><b>Local:</b> VI Congresso Brasileiro de Informática na Educação, Recife</p>
+                <p><b>Ano:</b> 2017</p>
+                <p><b>Em:</b> Anais dos Workshops do Congresso Brasileiro de Informática na Educação (CBIE), p. 962-971</p>
+              </div>
+              <div class="card-reveal blue-grey darken-3">
+                <span class="card-title white-text text-darken-4 truncate">Avaliação de linguagens visuais de
+                  programação no ensino médio a partir da utilização do conceito de Robótica Pedagógica.
+                  <i class="material-icons right">close</i>
+                </span>
+                <div class="row">
+                  <a class="waves-effect waves-light btn blue darken-2 col s6 offset-s3">editar</a>
+                </div>
+                <div class="row">
+                  <a class="waves-effect waves-light btn red darken-4 col s4 offset-s4">excluir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="page-footer blue-grey darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Sobre</h5>
+          <p class="grey-text text-lighten-4">Sistema administrativo de portifólio criado por Levy Santiago</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="row right">
+        <a class="col s6 grey-text text-lighten-4" href="admPublicacoes.html">Publicações</a>
+        <a class="col s6 grey-text text-lighten-4" href="admProjetos.html">Projetos</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script/valida.js"></script>
+</body>
+
+</html>
