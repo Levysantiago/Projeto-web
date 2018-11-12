@@ -8,8 +8,8 @@
                 <ul id="nav-mobile" class="left">
                 <li><a href="admPublicacoes.php">Publicações</a></li>
                 <li><a href="admProjetos.php">Projetos</a></li>
-                </ul>
-            </div>
+            </ul>
+        </div>
         </nav>
         <?php
     }
@@ -273,8 +273,8 @@
             </div>
             <div class="footer-copyright">
             <div class="row right">
-                <a class="col s6 grey-text text-lighten-4" href="admPublicacoes.html">Publicações</a>
-                <a class="col s6 grey-text text-lighten-4" href="admProjetos.html">Projetos</a>
+                <a class="col s6 grey-text text-lighten-4" href="admPublicacoes.php">Publicações</a>
+                <a class="col s6 grey-text text-lighten-4" href="admProjetos.php">Projetos</a>
             </div>
             </div>
         </footer>

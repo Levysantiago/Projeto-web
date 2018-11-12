@@ -8,8 +8,6 @@
     require_once('mysql.lib');
     require_once('admUtil.php');
 
-    
-
     $form = &$_REQUEST;
 
     if(isset($form['submit'])){
@@ -53,6 +51,10 @@
         $link_error = "O campo Link permite no máximo 255 caracteres.";
       }
       /*Fim Validação*/
+
+      else if($form['submit'] == 'logoff'){
+        echo "Logoff";
+      }
 
       else if($form['submit'] == 'modificar'){
         $sql = "UPDATE `publicacoes` SET titulo='".$form['titulo']."', ".

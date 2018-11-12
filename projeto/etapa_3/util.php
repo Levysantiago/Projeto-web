@@ -15,10 +15,10 @@
 			</nav>
 
 			<ul class="sidenav" id="mobile-demo">
-			    <li><a class="waves-effect waves-teal" href="./index.html">Principal</a></li>
-			    <li><a class="waves-effect waves-teal" href="./publicacoes.html">Publicações</a></li>
-			    <li><a class="waves-effect waves-teal" href="./projetos.html">Projetos</a></li>
-			    <li><a class="waves-effect waves-teal" href="./contato.html">Contato</a></li>
+			    <li><a class="waves-effect waves-teal" href="./index.php">Principal</a></li>
+			    <li><a class="waves-effect waves-teal" href="./publicacoes.php">Publicações</a></li>
+			    <li><a class="waves-effect waves-teal" href="./projetos.php">Projetos</a></li>
+			    <li><a class="waves-effect waves-teal" href="./contato.php">Contato</a></li>
 			</ul>
 	    </div>
         <?php
@@ -121,17 +121,16 @@
           </div>
 
 			<div class="footer-copyright blue-grey darken-3">
-		            <nav class="transparent z-depth-0">
-					    <div class="nav-wrapper">
-					      <ul class="right">
-					        <li><a href="./index.html">Principal</a></li>
-					        <li><a href="./publicacoes.html">Publicações</a></li>
-					        <li><a href="./projetos.html">Projetos</a></li>
-					        <li><a href="./contato.html">Contato</a></li>
-					      </ul>
-					    </div>
-					</nav>
-	            
+                <nav class="transparent z-depth-0">
+                    <div class="nav-wrapper">
+                        <ul class="right">
+                        <li><a href="./index.php">Principal</a></li>
+                        <li><a href="./publicacoes.php">Publicações</a></li>
+                        <li><a href="./projetos.php">Projetos</a></li>
+                        <li><a href="./contato.php">Contato</a></li>
+                        </ul>
+                    </div>
+                </nav>
 			</div>
         </footer>
         <?php
