@@ -1,3 +1,87 @@
+<?php
+    function move_header($str){
+        $host  = $_SERVER['HTTP_HOST'];
+        $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+        return ($host.$uri.'/'.$str); 
+    }
+
+    require_once('mysql.lib');
+    require_once('admUtil.php');
+
+    
+
+    $form = &$_REQUEST;
+
+    if(isset($form['submit'])){
+      if($form['submit'] == 'excluir'){
+        $sql = "DELETE FROM `publicacoes` WHERE id='".$form['id']."'";
+
+        if(mysqli_query($db_link, $sql)){
+            header("Location: http://".move_header('admPublicacoes.php?toast=d'));
+        }else{
+            header("Location: http://".move_header('admPublicacoes.php?toast=err'));
+        }
+      }else if($form['submit'] == 'editar'){
+        $sql = "SELECT * FROM `publicacoes` WHERE id='".$form['hid']."'";
+        $result = mysqli_query($db_link, $sql);
+        $row = mysqli_fetch_array($result);
+      }
+      /*Validação*/
+      else if(empty($form["titulo"])){
+        $titulo_error = "Título é obrigatório";
+      }else if(empty($form["evento"])){
+        $evento_error = "Evento/Congresso é obrigatório";
+      }else if(empty($form["cidade"])){
+        $cidade_error = "Cidade é obrigatório";
+      }else if(empty($form["ano"])){
+        $ano_error = "Ano da Publicação é obrigatório";
+      }else if(empty($form["link"])){
+        $link_error = "Link é obrigatório";
+      }else if(strlen($form["titulo"]) > 200){
+        $titulo_error = "O campo Título permite no máximo 200 caracteres.";
+      }else if(strlen($form["evento"]) > 200){
+        $evento_error = "O campo Evento permite no máximo 200 caracteres.";
+      }else if(strlen($form["cidade"]) > 72){
+        $cidade_error = "O campo Cidade permite no máximo 72 caracteres.";
+      }else if(strlen($form["anais"]) > 200){
+        $anais_error = "O campo Anais permite no máximo 200 caracteres.";
+      }else if(strlen($form["paginas"]) > 12){
+        $paginas_error = "O campo Páginas permite no máximo 12 caracteres.";
+      }else if(strlen($form["ano"]) > 4){
+        $ano_error = "O campo Ano permite no máximo 5 caracteres.";
+      }else if(strlen($form["link"]) > 255){
+        $link_error = "O campo Link permite no máximo 255 caracteres.";
+      }
+      /*Fim Validação*/
+
+      else if($form['submit'] == 'modificar'){
+        $sql = "UPDATE `publicacoes` SET titulo='".$form['titulo']."', ".
+                                        "evento='".$form['evento']."', ".
+                                        "cidade='".$form['cidade']."', ".
+                                        "anais='".$form['anais']."', ".
+                                        "paginas='".$form['paginas']."', ".
+                                        "ano='".$form['ano']."', ".
+                                        "link='".$form['link']."' WHERE id='".$form['hid']."'";
+        if(mysqli_query($db_link, $sql)){
+            header("Location: http://".move_header('admPublicacoes.php?toast=u'));
+        }else{
+            header("Location: http://".move_header('admPublicacoes.php?toast=err'));
+        }
+      }else if($form['submit'] == 'inserir'){
+        echo "ola";
+        $sql="INSERT INTO `publicacoes` (titulo, evento, cidade, anais, paginas, ano, link, data, user) 
+            VALUES ('{$form['titulo']}','{$form['evento']}', '{$form['cidade']}', 
+            '{$form['anais']}', '{$form['paginas']}', '{$form['ano']}', '{$form['link']}', current_date(),
+            '1')";
+        if(mysqli_query($db_link, $sql)){
+            header("Location: http://".move_header('admPublicacoes.php?toast=c'));
+        }else{
+            header("Location: http://".move_header('admPublicacoes.php?toast=err'));
+        }
+      }
+
+    }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -14,167 +98,69 @@
 
 <body>
 
-  <?php
-    $titulo_error = "";
-    $anais_error = "";
-    $link_error = "";
-    if(isset($_POST['submit'])){
-      if(empty($_POST["titulo"])){
-        $titulo_error = "Título é obrigatório";
-      }else if(empty($_POST["descricao"])){
-        $anais_error = "Anais é obrigatório";
-      }else if(empty($_POST["link"])){
-        $link_error = "Link é obrigatório";
-      }
-    }
-
-  ?>
-
   <header>
-    <nav class="blue-grey darken-3">
-      <div class="nav-wrapper">
-        <ul id="nav-mobile" class="left">
-          <li><a href="admPublicacoes.php">Publicações</a></li>
-          <li><a href="admProjetos.php">Projetos</a></li>
-        </ul>
-      </div>
-    </nav>
+    <?php
+        printNavBar();
+    ?>
 
     <h1 class="center-align">Publicações</h1>
   </header>
 
   <main class="container">
     <section>
-      <!-- CARD DE CADASTRO PUBLICAÇÃO -->
-      <div class="row">
-        <div class="col s12">
-          <div class="card white">
-            <div class="card-content">
-              <span class="card-title">Adicionar nova publicação</span>
-              <div class="row">
-                <form name="form" class="col s12" action="" method="POST" onsubmit="return validaFormPublicacoes(this);">
+      <?php 
+        // FORM DE CADASTRO PUBLICAÇÃO
+        printFormCadastroPublicacao($titulo_error, $evento_error, $cidade_error, 
+            $anais_error, $paginas_error, $ano_error, $link_error, $row, $form);
 
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <input type="text" id="titulo" name="titulo" placeholder="Ex.: Aplicando Internet das Coisas na medicina"
-                        class="validate truncate">
-                      <label for="titulo">Título</label>
-                      <?php echo "<span class=\"helper-text red-text\" data-error=\"Título é obrigadório\">$titulo_error</span>" ?>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="input-field col s12 m6">
-                      <input type="text" id="evento" name="evento" placeholder="Ex.: VI Congresso Brasileiro de Informática" class="validate truncate">
-                      <label for="evento">Evento/Congresso</label>
-                    </div>
-
-                    <div class="input-field col m6">
-                      <input type="text" id="cidade" placeholder="Ex.: Itabuna" class="validate">
-                      <label for="cidade">Cidade</label>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="input-field col s12 m9">
-                      <input type="text" id="anais" name="anais" placeholder="Ex.: Anais dos Workshops do Congresso Brasileiro de Informática"
-                        class="validate truncate">
-                      <label for="anais">Anais da publicação</label>
-                      <?php echo "<span class=\"helper-text red-text\" data-error=\"Anais é obrigadório\">$anais_error</span>" ?>
-                    </div>
-
-                    <div class="input-field col m3">
-                      <input type="text" id="paginas" placeholder="Ex.: p. 962-971" class="validate">
-                      <label for="paginas">Páginas</label>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="input-field col m6">
-                      <input type="text" id="ano" placeholder="Ex.: 2017" class="validate">
-                      <label for="ano">Ano da publicação</label>
-                    </div>
-
-                    <div class="input-field col s12 m6">
-                      <input type="text" id="link" name="link" placeholder="Ex.: http://exemplo.com/anais" class="validate">
-                      <label for="link">Link dos Anais</label>
-                      <?php echo "<span class=\"helper-text red-text\" data-error=\"Link é obrigadório\">$link_error</span>" ?>
-                    </div>
-                  </div>
-
-                  <div class="card-action">
-                    <div class="row">
-                      <button class="waves-effect waves-light btn green col s4 l2 offset-s4 offset-l5" type="submit" name="submit">Confirmar</button>
-                    </div>
-                  </div>
-
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- / CARD DE CADASTRO PUBLICAÇÃO -->
-
-      <h2 class="center-align">Publicações cadastradas</h2>
-
-      <div>
-        <div class="row">
-          <div class="col s12">
-            <div class="card white hoverable">
-              <div class="card-content white">
-                <span class="card-title activator grey-text text-darken-4">Avaliação de linguagens visuais de
-                  programação no ensino médio a partir da utilização do conceito de Robótica Pedagógica.
-                  <i class="material-icons right">more_vert</i>
-                </span>
-                <p><b>Local:</b> VI Congresso Brasileiro de Informática na Educação, Recife</p>
-                <p><b>Ano:</b> 2017</p>
-                <p><b>Em:</b> Anais dos Workshops do Congresso Brasileiro de Informática na Educação (CBIE), p. 962-971</p>
-              </div>
-              <div class="card-reveal blue-grey darken-3">
-                <span class="card-title white-text text-darken-4 truncate">Avaliação de linguagens visuais de
-                  programação no ensino médio a partir da utilização do conceito de Robótica Pedagógica.
-                  <i class="material-icons right">close</i>
-                </span>
-                <div class="row">
-                  <a class="waves-effect waves-light btn blue darken-2 col s6 offset-s3">editar</a>
-                </div>
-                <div class="row">
-                  <a class="waves-effect waves-light btn red darken-4 col s4 offset-s4">excluir</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
+        // LISTANDO PUBLICAÇÕES
+        echo "<h2 class=\"center-align\">Publicações cadastradas</h2>";
+        $sql="SELECT * FROM `publicacoes`";
+        $result = mysqli_query($db_link, $sql);
+        while($row=mysqli_fetch_array($result)){
+            printPublicacoes($row['id'], $row['titulo'], $row['evento'], $row['cidade'], 
+            $row['anais'], $row['paginas'], $row['ano'], $row['link']);
+        }
+      ?>
     </section>
   </main>
 
-  <footer class="page-footer blue-grey darken-3">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Sobre</h5>
-          <p class="grey-text text-lighten-4">Sistema administrativo de portifólio criado por Levy Santiago</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="row right">
-        <a class="col s6 grey-text text-lighten-4" href="admPublicacoes.html">Publicações</a>
-        <a class="col s6 grey-text text-lighten-4" href="admProjetos.html">Projetos</a>
-      </div>
-    </div>
-  </footer>
+  <?php
+    printFooter();
+  ?>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="script/valida.js"></script>
+
+  <?php
+  /*Imprimindo mensagem de confirmação*/
+  if(isset($_GET['toast'])){
+    if($_GET['toast'] == 'u'){
+      ?>
+      <script>M.toast({html: 'Publicação modificada com sucesso!', classes: 'rounded'});</script>
+      <?php
+    }else if($_GET['toast'] == 'c'){
+      ?>
+      <script>M.toast({html: 'Publicação criada com sucesso!', classes: 'rounded'});</script>
+      <?php
+    }else if($_GET['toast'] == 'd'){
+      ?>
+      <script>M.toast({html: 'Publicação deletada com sucesso!', classes: 'rounded'});</script>
+      <?php
+    }else{
+      ?>
+      <script>M.toast({html: 'Erro ao modificar publicação', classes: 'rounded'});</script>
+      <?php
+    }
+  }
+  ?>
+
 </body>
 
 </html>
+
+<?php 
+  require_once('mysql_close.lib');   	
+?>
